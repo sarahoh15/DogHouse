@@ -7,17 +7,14 @@ int radius = 24;
 int edge = 100;
 int inner = edge + radius;
 
-int numFrames = 2;  // The number of frames in the animation
+int numFrames = 2; 
 int currentFrame = 0;
 PImage[] images = new PImage[numFrames];
-PImage img;  // Declare variable "a" of type PImage
+PImage img;  
 Gif myAnimation;
 
 void setup() {
   size(640, 640);
-  noStroke(); 
-  ellipseMode(RADIUS);
-  rectMode(CORNERS);
   frameRate(5);
   
   images[0] = loadImage("house_1.png");
@@ -51,6 +48,4 @@ void draw() {
   }
   fill(255);  
   image(myAnimation, mx, my);
-  //image(img,mx,my);
-  //ellipse(mx, my, radius, radius);
 }
